@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibe" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/638d1d89ae.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text"> 
+                    <p>Software Engineer</p>
+                    <h1> Hi, I'm <span>Usman Khan</span><br>from Atlanta, Ga. </h1>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/aboutme.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            At sit sunt animi laudantium minus temporibus quisquam. 
+                            Cumque laudantium pariatur quo harum commodi quia 
+                            voluptate vitae, ad ipsum itaque debitis quae.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span> Soft Skills</span><br>Design Web/App Interfaces</li>
+                                <li><span> Technical Skills</span><br>Design Web/App Interfaces</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents active-tab" id="experience">
+                            <ul>
+                                <li><span> GM</span><br>Full Stack Software Developer</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>2023</span><br>Georgia Tech</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="services">
+            <div class ="container">
+                <h1 class ="sub-title"> My Services </h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>UX/UI Designs</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>App Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tabLinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabName){
+                for(tabLink of tabLinks){
+                    tabLink.classList.remove("active-link");
+                }
+                for(tabContent of tabContents){
+                    tabContent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabName).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
